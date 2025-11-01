@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./images/logo-delino-rispons.svg" type="image/x-icon" >
+  <title>ورود به حساب کاربری</title>
+  <style>
+    :root{
+      --bg: #fff6f3; /* پس‌زمینه خیلی روشن با تون نارنجی */
+      --accent: #EF4123; /* نارنجی-قرمز اصلی */
+      --accent-600: #f12b08; /* نارنجی-قرمز تیره‌تر */
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --error: #e11d48;
+      --radius: 16px;
+    }
+
+    /* پس‌زمینه با راه‌راه خیلی ظریف */
+    body{
+      margin: 0;
+      min-height: 100dvh;
+      color: var(--text);
+      background:
+        repeating-linear-gradient(
+          135deg,
+          rgba(241,43,8,0.02) 0px,
+          rgba(241,43,8,0.02) 1px,
+          transparent 1px,
+          transparent 8px
+        ),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+      font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, "IRANSans", Tahoma, sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card{
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+
+    .header{
+      padding: 28px 28px 12px;
+      text-align: center;
+    }
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(239,65,35,.10);
+      color: var(--accent-600);
+      font-weight: 700;
+    }
+
+    h1{
+      margin: 14px 0 6px;
+      font-size: 1.35rem;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    form{
+      padding: 24px 28px 28px;
+      display: grid;
+      gap: 16px;
+      padding-left: 50px;
+    }
+
+    .field{
+      display: grid;
+      gap: 8px;
+    }
+    label{
+      font-size: .9rem;
+    }
+    .control{
+      position: relative;
+    }
+
+    input[type="text"],
+    input[type="password"]{
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+      outline: none;
+      font-size: 0.95rem;
+      transition: border-color .15s, box-shadow .15s, background .15s;
+    }
+    input::placeholder{ color: #9ca3af; }
+    input:focus{
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(239,65,35,.20);
+    }
+
+    .row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .checkbox{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .checkbox input{ accent-color: var(--accent); }
+
+    .link{
+      color: var(--accent-600);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .link:hover{ text-decoration: underline; }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, var(--accent-600), var(--accent));
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform .06s ease, filter .2s ease, box-shadow .2s;
+      box-shadow: 0 6px 14px rgba(239,65,35,.35);
+    }
+    .btn:hover{ filter: brightness(1.05); }
+    .btn:active{ transform: translateY(1px); }
+
+    .divider{
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      color: var(--muted);
+      margin: 6px 0 0;
+      font-size: .9rem;
+    }
+    .divider::before,
+    .divider::after{
+      content: "";
+      height: 1px;
+      background: #e5e7eb;
+    }
+
+    .footer{
+      padding: 16px 28px 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* وضعیت خطا (اختیاری: با اضافه کردن کلاس .has-error به .field) */
+    .has-error input{ border-color: var(--error); }
+    .error-text{ color: var(--error); font-size: .85rem; }
+
+    /* ریسپانسیو ریز تنظیم */
+    @media (max-width: 360px){
+      .card{ border-radius: 0; box-shadow: none; }
+      body{ padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="header">
+      <div class="brand" aria-label="Brand">
+        <!-- اگر لوگو دارید اینجا بگذارید -->
+        <span>ورود</span>
+      </div>
+      <h1>خوش آمدید</h1>
+      <p class="subtitle">برای ادامه وارد حساب کاربری خود شوید</p>
+    </div>
+
+    <form action="/login" method="post" id="login" novalidate>
+      <div class="field">
+        <label for="name">نام کابری</label>
+        <div class="control">
+          <input id="userName" name="name" type="text" placeholder="alifara" autocomplete="name" maxlength="8" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="password">رمز عبور</label>
+        <div class="control">
+          <input id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" minlength="3" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="checkbox">
+          <input type="checkbox" name="remember" />
+          مرا به خاطر بسپار
+        </label>
+        <a class="link" href="./forgetPass.html">فراموشی رمز عبور؟</a>
+      </div>
+
+      <button class="btn" type="submit">ورود</button>
+
+    </form>
+
+    <div class="footer">
+      حساب ندارید؟
+      <a class="link" href="./signup.html">ایجاد حساب جدید</a>
+    </div>
+  </main>
+  <script src="./login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

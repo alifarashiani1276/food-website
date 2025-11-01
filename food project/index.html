@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفارش انلاین غذا از بهترین رستوران ها</title>
+    <link rel="shortcut icon" href="./images/logo-delino-rispons.svg" type="image/x-icon" >
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-up">
+            <div class="header-up-right">
+                <a href="./login.html"><button class="btn-login"><span>ورود</span></button></a>
+                <a href="./signup.html"><button class="btn-signup">ثبت نام</button></a>
+            </div>
+            <div class="user-login"> 
+                <p></p>
+                <img src="./images/arrowTobottom.svg" alt="">
+            </div>
+            
+            <div class="header-up-center">
+                <img src="./images/logo-delino-new.svg" alt="" width="100px" class="img-delino">
+                <img src="./images/logo-delino-rispons.svg" alt="" class="img-delino-respons">
+            </div>
+            <div class="header-up-left">
+                <img src="./images/shopping-cart.svg" alt="">
+                <p>0</p>
+            </div>
+            <div class="overly-shopping-cart">
+              
+              <div class="shopping-cart">
+                <div class="resturant-name">
+                  <div class="info-res">
+                       <img src="./images/imgRes.png" alt="" class="capture-res">
+                      <div class="spacefication res">
+                        <h5>رستوران آتیلا</h5>
+                        <span>مشاهده منو</span>
+                      </div>
+                  </div>
+                  <div class="exit-shopping-cart">
+                    <img src="./images/exitShopping.svg" alt="exit" class="exit-shopping-cart image">
+                  </div>
+                </div>
+                <div class="line-shopping"></div>
+
+                <div class="orders">
+
+                 <!-- <div class="order">
+                    <div class="order-image">
+                    <img src="./images/imgRes.png" alt="">
+                    </div>
+                    <div class="order name-price">
+                      <h4>نام غذا</h4>
+                      <p>قیمت</p>
+                    </div>
+                    <div class="order-number">
+                      <button class="order-increase">+</button>
+                      <p>1</p>
+                      <button class="order-decrease">-</button>
+                    </div>
+                   <div class="delete-order">
+                      <img src="./images/deleteShopping.svg" alt="">
+                    </div>
+                  </div> -->
+
+
+                </div>
+
+                <div class="line-shopping"></div>
+                <div class="total-price">
+                  <p>هزینه کل:</p>
+                  <h4>599,000 تومان</h4>
+                </div>
+                <div class="line-shopping"></div>
+                <div class="finalize-order">
+                  <button class="finalize-order btn">نهایی کردن سفارش</button>
+                </div>
+                <div class="logout-user">
+                  <p>برای  نهایی کردن  سفارش وارد حساب کاربری خود شوید.</p>
+                </div>
+               
+              </div>
+
+            </div>
+        </div>
+        <div class="overlay-user-menu">
+                
+              <div class="user-info">
+                <div class="user-info">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="User">
+                  <div class="username">
+                    <p>Ali</p>
+                    <span>اعتبار: ۰ تومان</span>
+                  </div>
+                </div>
+                <img src="./images/exit.svg" alt="" class="exit-menu">
+              </div>
+
+              <div class="menu-list">
+                <ul>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke-width="2" d="M4 4h16v12H5.17L4 17.17V4z"/>
+                    </svg>
+                    پیام‌ها
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke-width="2" d="M4 7h16v10H4zM4 7l8-4 8 4"/>
+                    </svg>
+                    کیف پول
+                  </li>
+                  <li class="menu-list-aboutme">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle cx="12" cy="7" r="4" stroke-width="2"/>
+                      <path stroke-width="2" d="M6 21v-2a6 6 0 0112 0v2"/>
+                    </svg>
+                    اطلاعات من
+                  </li>
+                  <li>
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke-width="2" d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/>
+                      <circle cx="12" cy="9" r="2.5" stroke-width="2"/>
+                    </svg>
+                    آدرس‌ها
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"   role="img" aria-labelledby="title">   <title>سفارشات من</title>
+                      <!-- بدنه ساک -->
+                      <path d="M7 7h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/>
+                      <!-- دسته ساک -->
+                      <path d="M9 7a3 3 0 0 1 6 0"/>
+                      <!-- تیک سفارش -->
+                      <path d="M9 13l2 2l4-4"/>
+                    </svg>
+  
+                    سفارشات من
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke-width="2" d="M12 21s-7-4.35-7-10a5 5 0 0110 0 5 5 0 0110 0c0 5.65-7 10-7 10z"/>
+                    </svg>
+                    علاقه‌مندی‌ها
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle cx="9" cy="7" r="4" stroke-width="2"/>
+                      <circle cx="17" cy="17" r="4" stroke-width="2"/>
+                      <path stroke-width="2" d="M11 11l4 4"/>
+                    </svg>
+                    دعوت از دوستان
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <rect x="4" y="10" width="16" height="10" rx="2" stroke-width="2"/>
+                      <path stroke-width="2" d="M8 10V7a4 4 0 118 0v3"/>
+                    </svg>
+                    تغییر رمز
+                  </li>
+                </ul>
+              </div>
+
+              <span class="exit-account">خروج از حساب</span>
+       </div>
+        <div class="header-mid"></div>
+
+        <div class="header-down">
+            <div class="svg-location"><img src="./images/locationSvg.svg" alt=""></div>
+                
+             <div class="custom-select">
+               <div class="selected">🌍 غذاهای کشور:</div>
+               <div class="options">
+                 <div class="option" data-value="American">
+                   <img src="https://flagcdn.com/w20/us.png" class="flag" alt=""> آمریکا
+                 </div>
+                 <div class="option" data-value="British">
+                   <img src="https://flagcdn.com/w20/gb.png" class="flag" alt=""> انگلیس
+                 </div>
+                 <div class="option" data-value="Canadian">
+                   <img src="https://flagcdn.com/w20/ca.png" class="flag" alt=""> کانادا
+                 </div>
+                 <div class="option" data-value="French">
+                   <img src="https://flagcdn.com/w20/fr.png" class="flag" alt=""> فرانسه
+                 </div>
+                 <div class="option" data-value="Chinese">
+                   <img src="https://flagcdn.com/w20/cn.png" class="flag" alt=""> چین
+                 </div>
+               </div>
+             </div>
+
+        </div>
+    </header>
+    
+    <main>
+         <div class="search">
+            <div class="input-search">
+                <img src="./images/inputSearch.svg" alt="">
+                <input type="search" placeholder="جستجو براساس نام غذا...">
+            </div>
+            <button class="btn-search">جستجوکن</button>
+         </div>
+         <div class="result-search">
+          <div class="result-search-cards"></div>
+         </div>
+
+         <div class="baner-top">
+             <a href="https://www.delino.com/app?" class="img-baner">
+                <img src="./images/banner1.jpg" alt="">
+            </a>
+         </div>
+
+         <div class="favorit-food">
+            <div class="falvorot-h2">
+                <h2>دسته های محبوب</h2>
+            </div>
+            <div class="favorit-group">
+            <div class="favorit">
+                <p>پیتزا</p>
+                <img src="./images/peeza.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit" data-value="lamb">
+                <p>غذا های گوشتی</p>
+                <img src="./images/kebab.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit">
+                <p>سوپ</p>
+                <img src="./images/soup.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit">
+                <p>ساندویچ</p>
+                <img src="./images/sandwich.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit" data-value="rice">
+                <p>غذای های برنجی</p>
+                <img src="./images/iranian food.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit" data-value="chicken_breast">
+                <p>انواع سینه مرغ</p>
+                <img src="./images/sukary.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit">
+                <p>پاستا</p>
+                <img src="./images/pasta.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit">
+                <p>سالاد</p>
+                <img src="./images/salad.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit">
+                <p>صبحانه</p>
+                <img src="./images/breakfast.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+            <div class="favorit">
+                <p>استیک</p>
+                <img src="./images/stick.jpg" alt="">
+                <div class="overly-food"></div>
+            </div>
+         </div>
+         </div>
+
+         <div class="NearbyRestaurants">
+            <div class="NearbyRestaurants-up">
+                <h2>منو</h2>
+                <div class="NearbyRestaurants-up-left">
+                    <h3>غذا های بیشتر</h3>
+                    <img src="./images/arrowToLeft.svg" alt="">
+                </div>
+            </div>
+            <div class="cards-down">
+                <!-- <div class="card-meals">
+                    <div class="card-image">
+                        <img src="./images/R1.jpg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-Specifications">
+                            <h4>پاستا بیف</h4>
+                            <div class="Specifications-price">
+                                <p>50دلار</p>
+                            </div>
+                            <div class="btn-addShoppingCard">
+                                <button>افزودن به سبد خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+         </div>
+
+
+         <div class="baner-aplication">
+            <div class="baner-aplication-right">
+                <div class="baner-aplication-right-text">
+                    <h3>اپلیکیشن موبایل دلینو</h3>
+                    <p>برای دریافت لینک دانلود اپلیکیشن دلینو، شماره موبایلت رو وارد کن</p>
+                </div>
+                <div class="baner-aplication-right-input">
+                    <input type="text" id="" placeholder="۰۹۱۲xxxxxx" maxlength="11">
+                    <button>دریافت لینک دانلود</button>
+                </div>
+                <div class="baner-aplication-right-lable">
+                        <img src="./images/lable-aplication.png" alt="">
+                        <img src="./images/lable2-aplication.png" alt="">
+                        <img src="./images/lable3-aplication.png" alt=""> 
+                        <img src="./images/lable6-aplication.png" alt="">
+                        <img src="./images/lable5-aplication.png" alt="">
+                        <img src="./images/lable4-aplication.png" alt="">
+                </div>
+            </div>
+            <div class="baner-aplication-left">
+                <img src="./images/phone-bannerAplication.png" alt="">
+            </div>
+         </div>
+
+         <div class="fainal-text">
+            <h2>سفارش آنلاین غذا از بهترین رستوران‌‌ها و فست‌فود‌‌ها در رشت</h2>
+            <p>با استفاده از وبسایت و اپلیکیشن سفارش آنلاین غذای دلینو شما میتونید به راحتی و در سریع ترین زمان ممکن غذای مورد علاقه‌ی خودتون رو از بهترین رستوران‌ها و فست فود‌های تهران، قم، کرج، گرگان، یزد، ارومیه و سایر شهرهای ایران سفارش بدین.</p>
+         </div>
+
+         <div class="line"></div>
+
+         <div class="license">
+            <div class="license-right">
+                <img src="./images/logo-kasbokar.png" alt="">
+                <img src="./images/logo.png" alt="">
+                <img src="./images/logo (1).png" alt="">
+            </div>
+            <div class="license-left">
+                <p>تمامی کالاها و خدمات این سایت، دارای مجوزهای لازم از مراجع مربوطه می‌باشند و  فعالیت‌های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است.</p>
+            </div>
+         </div>
+
+    </main>
+
+    <footer>
+        <div class="language">
+            <button>English<img src="./images/language.svg" alt=""></button>
+        </div>
+        <div class="line-footer"></div>
+        <div class="footer-down">
+            <div class="footer-down-right">
+                <div class="footer-down-right-logo">
+                    <div class="logo-footer"><img src="./images/logo-footer.png" alt=""></div>
+                    <div class="items-logo-footer">
+                    <p>وبلاگ دلینو</p>
+                    <p>درباره</p>
+                    <p>تماس با ما </p>
+                    <p>قوانین</p>
+                    <p>سوالات متداول</p>
+                    <p>ثبت نام رستوران</p>
+                    <p>حریم شخصی</p>
+                    </div>
+                </div>
+                <div class="logo-footer-text">
+                    <p>تمامی لوگوها و اطلاعات رستوران ها با احترام متعلق به مالکین رستوران ها است و امتیاز استفاده  از این اطلاعات تنها برای دلینو مجاز است.</p>
+                </div>
+            </div>
+            <div class="footer-down-left">
+                <div class="footer-down-left-media">
+                    <img src="./images/telegram.svg" alt="">
+                    <img src="./images/insta.svg" alt="">
+                    <img src="./images/linkdin.svg" alt="">
+                    <img src="./images/aparat.svg" alt="">
+                    <img src="./images/twiter.svg" alt="">
+                </div>
+                <div class="footer-down-left-lable">
+                    <img src="./images/lable2-aplication.png" alt="">
+                    <img src="./images/lable4-aplication.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

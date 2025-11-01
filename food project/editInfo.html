@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ویرایش اطلاعات کاربر</title>
+  <link rel="shortcut icon" href="./images/logo-delino-rispons.svg" type="image/x-icon" >
+  <style>
+    :root{
+      --bg: #fff6f3;          /* پس‌زمینه خیلی روشن با تون نارنجی */
+      --accent: #EF4123;      /* نارنجی-قرمز اصلی */
+      --accent-600: #f12b08;  /* نارنجی-قرمز تیره‌تر */
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --error: #e11d48;
+      --success: #059669;
+      --radius: 16px;
+    }
+
+    /* پس‌زمینه با راه‌راه خیلی ظریف */
+    body{
+      margin: 0;
+      min-height: 100dvh;
+      color: var(--text);
+      background:
+        repeating-linear-gradient(
+          135deg,
+          rgba(241,43,8,0.02) 0px,
+          rgba(241,43,8,0.02) 1px,
+          transparent 1px,
+          transparent 8px
+        ),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%); 
+      font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, "IRANSans", Tahoma, sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card{
+      width: 100%;
+      max-width: 820px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+
+    .header{
+      padding: 28px 28px 16px;
+      text-align: center;
+    }
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(239,65,35,.10);
+      color: var(--accent-600);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    h1{
+      margin: 14px 0 6px;
+      font-size: 1.35rem;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    form{
+      padding: 24px 28px 8px;
+      display: grid;
+      gap: 22px;
+    }
+
+    /* سکشن‌های فرم */
+    .section{
+      display: grid;
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      background: #f9fafb;
+    }
+    .section-title{
+      margin: 0;
+      font-size: 1rem;
+      color: var(--accent-600);
+    }
+
+    /* شبکه فیلدها */
+    .grid{
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 640px){
+      .grid.cols-2{ grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 960px){
+      .grid.cols-3{ grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .field{
+      display: grid;
+      gap: 8px;
+    }
+    label{
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    .control{
+      position: relative;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea{
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+      outline: none;
+      font-size: 0.95rem;
+      transition: border-color .15s, box-shadow .15s, background .15s;
+    }
+    textarea{ min-height: 96px; resize: vertical; }
+    input::placeholder, textarea::placeholder{ color: #9ca3af; }
+    input:focus, select:focus, textarea:focus{
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(239,65,35,.20);
+    }
+
+    /* آواتار */
+    .avatar-row{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .avatar{
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffe2db, #fff);
+      border: 2px dashed rgba(239,65,35,.35);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: var(--accent-600);
+      user-select: none;
+    }
+    .hint{
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    /* دکمه‌ها */
+    .actions{
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      padding: 0 28px 24px;
+      flex-wrap: wrap;
+    }
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform .06s ease, filter .2s ease, box-shadow .2s;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn-primary{
+      background: linear-gradient(90deg, var(--accent-600), var(--accent));
+      color: #ffffff;
+      box-shadow: 0 6px 14px rgba(239,65,35,.35);
+    }
+    .btn-primary:hover{ filter: brightness(1.05); }
+    .btn-ghost{
+      background: #ffffff;
+      color: var(--accent-600);
+      border: 1px solid #f1f5f9;
+    }
+
+    /* وضعیت اعتبارسنجی پایه (فقط CSS) */
+    input:required:invalid,
+    select:required:invalid{
+      border-color: #f3b3c2;
+    }
+    .error-text{ color: var(--error); font-size: .85rem; }
+
+    /* فوتر کوچک */
+    .footer{
+      padding: 12px 28px 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 360px){
+      .card{ border-radius: 0; box-shadow: none; }
+      body{ padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="header">
+      <div class="brand" aria-label="Brand">
+        <span>ویرایش اطلاعات</span>
+      </div>
+      <h1>اطلاعات کاربری شما</h1>
+      <p class="subtitle">مشخصات خود را بررسی و به‌روز کنید</p>
+    </div>
+
+    <form id="profile-form" novalidate>
+      <!-- سکشن پروفایل -->
+      <section class="section" aria-labelledby="sec-profile">
+        <h2 id="sec-profile" class="section-title">مشخصات اصلی</h2>
+        <div class="avatar-row">
+          <div class="avatar" aria-label="Avatar">A</div>
+        </div>
+
+        <div class="grid cols-3">
+          <div class="field">
+            <label for="firstName">نام</label>
+            <input id="firstName" name="firstName" type="text" placeholder="علی"  required>
+          </div>
+          <div class="field">
+            <label for="lastName">نام خانوادگی</label>
+            <input id="lastName" name="lastName" type="text" placeholder="فراشیانی" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="username">نام کاربری</label>
+            <input id="username" name="username" type="text" placeholder="alifara" autocomplete="username" maxlength="8" required>
+          </div>
+        </div> 
+
+        <div class="grid cols-2">
+          <div class="field">
+            <label for="email">ایمیل</label>
+            <input id="email" name="email" type="email" placeholder="ali@example.com" readonly>
+          </div>
+          <div class="field">
+            <label for="phone">شماره موبایل</label>
+            <input id="phone" name="phone" type="tel" placeholder="09xxxxxxxxx" required>
+          </div>
+        </div>
+      </section>
+
+      <!-- سکشن جزئیات -->
+      <section class="section" aria-labelledby="sec-details">
+        <h2 id="sec-details" class="section-title">جزئیات بیشتر</h2>
+
+        <div class="grid cols-3">
+          <div class="field">
+            <label for="birthdate">تاریخ تولد</label>
+            <input id="birthdate" name="birthdate" type="date" required>
+          </div>
+          <div class="field">
+            <label for="gender">جنسیت</label>
+            <select id="gender" name="gender" required>
+              <option value="">انتخاب کنید…</option>
+              <option value="male">مرد</option>
+              <option value="female">زن</option>
+              <option value="other">غیره</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="nationalId">کد ملی</label>
+            <input id="nationalId" name="nationalId" type="text" placeholder="—" autocomplete="new-password" required>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="address">آدرس</label>
+            <textarea id="address" name="address" placeholder="تهران، ..." required></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- سکشن امنیتی (اختیاری) -->
+      <section class="section" aria-labelledby="sec-security">
+        <h2 id="sec-security" class="section-title">امنیت حساب</h2>
+        <div class="grid cols-3">
+          <div class="field">
+            <label for="currentPass">رمز عبور فعلی</label>
+            <input id="currentPass" name="currentPass" type="password" placeholder="••••••••" autocomplete="current-password">
+            <small class="hint">برای تغییر رمز، رمز فعلی لازم است.</small>
+          </div>
+          <div class="field">
+            <label for="newPass">رمز عبور جدید</label>
+            <input id="newPass" name="newPass" type="password" placeholder="••••••••" autocomplete="new-password" >
+          </div>
+          <div class="field">
+            <label for="confirmPass">تایید رمز جدید</label>
+            <input id="confirmPass" name="confirmPass" type="password" placeholder="••••••••" autocomplete="new-password" >
+          </div>
+        </div>
+      </section>
+
+      <!-- دکمه‌ها -->
+      <div class="actions">
+        <button type="button" class="btn btn-ghost" onclick="history.back()">انصراف</button>
+        <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+      </div>
+    </form>
+
+    <div class="footer">
+    </div>
+  </main>
+  <script src="./editeInfo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

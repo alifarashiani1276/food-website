@@ -1,0 +1,6 @@
+<svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="220" height="70" rx="18" fill="#FFF7F1"/>
+  <rect x="8" y="8" width="54" height="54" rx="18" fill="#F26B1D"/>
+  <path d="M30 19C24.477 19 20 23.477 20 29V37C20 42.523 24.477 47 30 47H38C43.523 47 48 42.523 48 37V29C48 23.477 43.523 19 38 19H30ZM33 26H35V31H40V33H35V38H33V33H28V31H33V26ZM29 39H39V41H29V39Z" fill="white"/>
+  <text x="72" y="45" fill="#F26B1D" font-family="Tahoma, Arial, sans-serif" font-size="32" font-weight="700">سفره</text>
+</svg>

@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ویرایش اطلاعات کاربر</title>
-  <link rel="shortcut icon" href="./images/logo-delino-rispons.svg" type="image/x-icon" >
+  <link rel="shortcut icon" href="./images/sofreh-brand.svg" type="image/x-icon" >
   <style>
     :root{
-      --bg: #fff6f3;          /* پس‌زمینه خیلی روشن با تون نارنجی */
-      --accent: #EF4123;      /* نارنجی-قرمز اصلی */
-      --accent-600: #f12b08;  /* نارنجی-قرمز تیره‌تر */
+      --bg: #f3f8f7;          /* پس‌زمینه خیلی روشن با تون نارنجی */
+      --accent: #0f766e;      /* نارنجی-قرمز اصلی */
+      --accent-600: #115e59;  /* نارنجی-قرمز تیره‌تر */
       --text: #1f2937;
       --muted: #6b7280;
       --card: #ffffff;
@@ -26,8 +26,8 @@
       background:
         repeating-linear-gradient(
           135deg,
-          rgba(241,43,8,0.02) 0px,
-          rgba(241,43,8,0.02) 1px,
+          rgba(15,118,110,0.025) 0px,
+          rgba(15,118,110,0.025) 1px,
           transparent 1px,
           transparent 8px
         ),
@@ -152,7 +152,7 @@
       width: 76px;
       height: 76px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #ffe2db, #fff);
+      background: linear-gradient(135deg, #dcefeb, #fff);
       border: 2px dashed rgba(239,65,35,.35);
       display: grid;
       place-items: center;
@@ -202,7 +202,7 @@
     /* وضعیت اعتبارسنجی پایه (فقط CSS) */
     input:required:invalid,
     select:required:invalid{
-      border-color: #f3b3c2;
+      border-color: #b8ddd6;
     }
     .error-text{ color: var(--error); font-size: .85rem; }
 
@@ -218,11 +218,44 @@
       .card{ border-radius: 0; box-shadow: none; }
       body{ padding: 0; }
     }
+  
+    .brand-mark {
+      display: block;
+      width: 74px;
+      height: 74px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+    }
+    .card {
+      border: 1px solid rgba(15, 118, 110, .12);
+      box-shadow: 0 18px 55px rgba(17, 94, 89, .10);
+    }
+    .btn, button[type="submit"] {
+      background: linear-gradient(135deg, #0f766e, #115e59) !important;
+      box-shadow: 0 8px 18px rgba(15, 118, 110, .18);
+    }
+    .btn:hover, button[type="submit"]:hover {
+      filter: brightness(.96);
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #0f766e !important;
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, .12);
+      outline: none;
+    }
+
+  
+    .brand-mark { display:block; width:74px; height:74px; object-fit:contain; margin:0 auto 12px; }
+    .card { border:1px solid rgba(15,118,110,.12); box-shadow:0 18px 55px rgba(17,94,89,.10); }
+    .btn, button[type="submit"] { background:linear-gradient(135deg,#0f766e,#115e59) !important; box-shadow:0 8px 18px rgba(15,118,110,.18); }
+    .btn:hover, button[type="submit"]:hover { filter:brightness(.96); }
+    input:focus, select:focus, textarea:focus { border-color:#0f766e !important; box-shadow:0 0 0 3px rgba(15,118,110,.12); outline:none; }
+
   </style>
 </head>
 <body>
   <main class="card" role="main">
     <div class="header">
+      <img class="brand-mark" src="./images/sofreh-brand.svg" alt="سفره">
       <div class="brand" aria-label="Brand">
         <span>ویرایش اطلاعات</span>
       </div>

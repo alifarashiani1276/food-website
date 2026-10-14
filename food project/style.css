@@ -1,3 +1,6 @@
+/* Sofreh-inspired brand palette */
+:root { --sofreh-primary: #0f766e; --sofreh-primary-dark: #134e4a; --sofreh-accent: #14b8a6; --sofreh-bg: #f6faf9; }
+::selection { background: #99f6e4; color: #042f2e; }
 body{
     margin: 0px;
     overflow-x: hidden; 
@@ -163,7 +166,7 @@ body{
 
     /* تغییر رنگ در هاور */
     .menu-list li:hover {
-      color: #Ef4123;
+      color: #0f766e;
     }
 
     .exit-account {
@@ -181,8 +184,8 @@ body{
     font-size: 1rem;
     background : none;
     border-radius: 5px;
-    border: 1px solid #Ef4123;
-    color: #f12b08;
+    border: 1px solid #0f766e;
+    color: #115e59;
     padding: 5px 15px 5px 15px;
     display: flex;
     justify-content: center;
@@ -202,7 +205,7 @@ body{
 }
 
 .header-up-left{
-    background-color: #Ef4123;
+    background-color: #0f766e;
     border-radius:5px;
     padding:10px 13px 5px 5px ;
     display: flex;
@@ -212,7 +215,7 @@ body{
     cursor: pointer;
 }
 .header-up-left:hover{
-    background-color: #eb2805;
+    background-color: #115e59;
     transition: background-color 0.3s ease;
 }
 .header-up-left img{
@@ -239,7 +242,7 @@ body{
     outline: none;
     border: none;
     cursor: pointer;
-    /* color: #Ef4123; */
+    /* color: #0f766e; */
 }
 .svg-location img {
     width: 25px;
@@ -346,7 +349,7 @@ body{
 }
 .btn-search{
     height: 70%;
-    background-color:#Ef4123;
+    background-color:#0f766e;
     border: none;
     border-radius: 5px;
     color: white;
@@ -355,7 +358,7 @@ body{
     cursor: pointer;
 }
 .btn-search:hover{
-    background-color: #eb2907;
+    background-color: #115e59;
     transition: background-color 0.3s ease;
 }
 .result-search{
@@ -404,7 +407,7 @@ body{
     justify-content: center;
     padding-top: 20px;
     width: 100%;
-    /* background-color: #Ef4123; */
+    /* background-color: #0f766e; */
 }
 .falvorot-h2{
     display: flex;
@@ -492,7 +495,7 @@ body{
     cursor: pointer;
 }
 .NearbyRestaurants-up-left h3{
-    color: #Ef4123;
+    color: #0f766e;
     font-weight: 200;
 }
 .NearbyRestaurants-up-left img{
@@ -570,12 +573,12 @@ body{
     border: none;
     border-radius: 5px  !important;
     color: white;
-    background-color: #Ef4123;
+    background-color: #0f766e;
     font-size: 13px;
     font-weight: 100;
 }
 .btn-addShoppingCard button:hover{
-    background-color: #e02201;
+    background-color: #134e4a;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -650,7 +653,7 @@ body{
 
 .baner-aplication-right-input button {
     padding: 20px;
-    background-color: #ef4123;
+    background-color: #0f766e;
     color: #fff;
     font-size: 1rem;
     outline: none;
@@ -824,8 +827,8 @@ footer{
 }
 
 :root {
-  --accent: #EF4123;
-  --bg: #faf7f6;
+  --accent: #0f766e;
+  --bg: #f6faf9;
   --muted: #7a7a7a;
   --card: #ffffff;
   --radius: 12px;
@@ -861,7 +864,7 @@ footer{
   flex-direction: column; /* همه بچه‌ها ستونی زیر هم */
   gap: 16px;              /* فاصله بین هر بخش */
   background: #ffffff;       /* بک‌گراند سفید */
-  border: 2px solid #ef4123;
+  border: 2px solid #0f766e;
   min-width: 100%;
   width: 100%;
   border-radius: 10px;
@@ -881,13 +884,13 @@ footer{
   height: 60px;
   border-radius: 8px;
   object-fit: cover;
-  border: 2px solid #ef4123;
+  border: 2px solid #0f766e;
 }
 
 .spacefication h5 {
   margin: 0;
   font-size: 16px;
-  color: #ef4123;
+  color: #0f766e;
   text-wrap: nowrap;
 }
 
@@ -947,8 +950,8 @@ footer{
 
 .order-number button {
   background: #fff;
-  color: #ef4123;               /* متن همون رنگ */
-  border: 1px solid #ef4123;    /* خط دور با همون رنگ */
+  color: #0f766e;               /* متن همون رنگ */
+  border: 1px solid #0f766e;    /* خط دور با همون رنگ */
   width: 30px;                  /* اندازه مساوی برای دایره */
   height: 30px;
   border-radius: 50%;           /* دایره کامل */
@@ -971,7 +974,7 @@ footer{
     cursor: pointer;
 }
 .delete-order img{
-    color: #e02201;
+    color: #134e4a;
 }
 .line-shopping{
     width: 100%;
@@ -1007,7 +1010,7 @@ footer{
     padding: 0px 15px 10px 30px;
 }
 .finalize-order .btn{
-    background-color: #ef4123;
+    background-color: #0f766e;
     color: white;
     border: none;
     border-radius: 10px;
@@ -1016,7 +1019,7 @@ footer{
     min-width:90%;
 }
 .finalize-order .btn:hover{
-    background-color: #e02201;
+    background-color: #134e4a;
 }
 .logout-user{
     display: flex;
@@ -1025,7 +1028,7 @@ footer{
 }
 .logout-user p {
     text-align: center;
-    color: #e02201;
+    color: #134e4a;
 }
 .info-res{
     display: flex;
